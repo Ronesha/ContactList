@@ -1,0 +1,47 @@
+* {
+   margin:0;
+   padding:0;
+}
+
+body{
+   background-color:#3CB371;	
+   color:#434343;
+}
+
+#myForm{
+   padding: 60px 30px;
+   background:#fff;
+  
+}
+
+.form-group{
+   padding: 5px 30px;
+   }
+
+.fa-address-card {
+   font-size: 10vh;
+}
+
+.btn-red{
+   color:red;
+   display:none;
+}
+
+.fa-times-circle{
+   color:red;
+   
+}
+.fa-times-circle:hover{
+   transform: scale(2.5);
+   
+}
+
+
+h1{
+   color:#fff;
+}
+ 
+/*img */
+.circle:hover{
+ transform: scale(2.0);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Address Book</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- Materialize Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+      <!--Fonts Awesome-->
+      <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+      <!--CSS File-->
+      <link rel="stylesheet" href="style.css">
+     </head>
+ <body>
+      <h1 class="center-align">Address Book</h1>
+       <div class="row">
+        <div class="col s3">
+      
+          <form id="myForm">
+            <div class="form-group">
+               <label for="Name">Name</label>
+               <input placeholder="Enter Name" id="user-name" type="text" class="validate">
+           </div>
+           <div class="form-group">
+               <label for="Email">Email</label>
+               <input placeholder="Email Adress" id="user-email" type="email" class="validate">
+           </div>
+        
+           <div class="form-group">
+               <label for="Phone Number">Phone Number</label>
+               <input placeholder="Phone Number" id="user-number" type="text" class="validate">
+           </div>
+
+           <div class="form-group">
+               <label for="Age">Age</label>
+               <input placeholder="Enter Age" id="user-age" type="number" class="validate">
+           </div>
+         
+              <p class="btn-red">Please enter all fields correctly</p>
+            <input type="submit" class="btn waves-effect waves-light">
+   
+         </form>
+      </div>
+ 
+         <div class="col s9">
+            <div id="parent-element">
+              <ul class="collection with-header">
+                <li class="collection-header"><h4>Contacts</h4></li>
+               </ul>
+                <ul class="collection">
+                  <li class="collection-item avatar">
+                    <img src="img/avatar.png" alt="" class="circle">
+                    <span class="title">Name</span>
+                    <p>Email <br>
+                      Phone Number <br>
+                     <strong>Age</strong><br>
+                    </p>
+                    <a href="#!" class="secondary-content"><i class="far fa-address-card"></i><i class="fas fa-times-circle close"></i>
+                    </a>
+                  </li>
+                </ul>
+           </div>
+        </div>
+  
+
+ 
+
+
+
+      <!--[if lt IE 7]>
+         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+      <![endif]-->
+     <!-- Compiled and minified Materialize JavaScript -->
+     <!-- Compiled and minified JavaScript -->
+     
+     <!--JS File-->
+     <script src="app.js"></script>   
+   </body>
+</html>
