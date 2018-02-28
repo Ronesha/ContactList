@@ -22,7 +22,7 @@ UI.prototype.createContact = function(personalContact){
    
     //add contact to UI
  
-    let parent = document.querySelector('.collection');
+    var parent = document.querySelector('.collection');
     let textTemplate = `
                    <li class="collection-item avatar">
                     <img src="img/avatar.png" alt="" class="circle">
@@ -43,17 +43,11 @@ UI.prototype.createContact = function(personalContact){
 }
 
 //delete contact
-UI.prototype.deleteContact = function(personalContact){
-   let anchor = document.createElement(a);
-   let fonts = element.classList.add("fas fa-times-circle");
-
-   anchor.appendChild(fonts);
-
-   anchor.addEventListener('click', function(){
-         alert('clicked');
-   })
-
-    
+UI.prototype.deleteContact = function(e){
+      var parent = document.querySelector('.collection');
+      parent.addEventListener('click', function(e){
+            parent.remove(e.target);
+      })
        
 }
 
@@ -97,11 +91,13 @@ function enterContact(e) {
     const ui = new UI();
     ui.createContact(personalContact);
     ui.clearForm(personalContact);
+    ui.deleteContact(e.personalContact);
+    
    }
 
  //set up UI prototype to delete contact. Add Event listener to X button
 
-
+   
 
 
   e.preventDefault();
