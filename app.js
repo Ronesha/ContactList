@@ -19,7 +19,7 @@ let db = [
  this.generateContacts = function(){
     let parent = document.querySelector('#parent-element');
     let template = '';
-  //Loop through database and display information
+  //Loop through database and display contact list
    for(var i =0; i< db.length; i++){
       template += `<ul class="collection">
                    <li class="collection-item avatar">
@@ -29,8 +29,8 @@ let db = [
                    ${db[i].phoneNumber} <br>
                    ${db[i].age}<br>
                   </p>
-                  <a href="#!" class="secondary-content"><i class="far fa-address-card"></i><i class="fas fa-times-circle"></i>
-                  </a>
+                  <a href="#!" class="secondary-content"><i class="far fa-address-card"></i>
+                  <span class="delete-item"><i class="fas fa-times-circle"></i></span></a>
                  </li>
                  </ul>            
                     `
@@ -38,10 +38,10 @@ let db = [
  
    parent.innerHTML = '';
    parent.insertAdjacentHTML('afterbegin', template);
-   
+   deleteItem();
    };
   
-   //Add new contacts to the list
+   //Create new contact
     this.enterUser = function(){
     
       function grabUser(){
@@ -64,7 +64,6 @@ let db = [
       }
        
          document.querySelector('#myForm').addEventListener('submit', function(e){
-           
          e.preventDefault();
          grabUser();
    
@@ -73,6 +72,7 @@ let db = [
       
       };
    
+      //Form Validation
      this.validateUser = function(inputs){
    
        for(var i = 0; i < inputs.length; i++) {
@@ -83,18 +83,29 @@ let db = [
        return true;
      };
    
-    
+
+     //Delete Contact
      this.deleteItem = function(){
-      let buttons = document.querySelectorAll('.close');
-
-        buttons.addEventListener('click', function(){
-           alert('click')
-        })
-
-
-
-     }
-      
+      let buttons = document.querySelectorAll('.delete-item');
+ 
+      function deleteThis(element){
+        document.getElementById('#parent-element').remove(child); 
+        db.splice(obj,1);
+        generateList();
+ 
+ 
+      }
+ 
+      for(var i = 0; i< buttons.length; i++){
+      buttons[i].addEventListener('click', function(e){
+           deleteThis(this);
+           console.log(buttons)
+      })
+   
+    }
+    }
+  
+     
 
 
    this.init();
